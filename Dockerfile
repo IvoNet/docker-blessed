@@ -1,17 +1,10 @@
-FROM ivonet/x11webui:latest
+FROM node:12.4.0-alpine
 LABEL maintainer="Ivo Woltring - @ivonet"
 
-RUN apt-get update \
- && apt-get install --no-install-recommends -y TODO\
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk add git \
+ && git clone https://github.com/yaronn/blessed-contrib.git \
+ && apk del git \
+ && cd /blessed-contrib \
+ && npm install
 
-ARG APP=blessed
-ARG USR=user
-ARG PWD=secret
-
-ENV APPNAME=$APP      \
-    USERNAME=$USR     \
-    GPASSWORD=$PWD
-
-COPY root/ /
+ENTRYPOINT ["/usr/local/bin/node", "/blessed-contrib/examples/dashboard-random-colors.js"]

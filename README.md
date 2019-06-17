@@ -1,38 +1,13 @@
 # blessed
 
-Web desktop docker image for: blessed
+Docker image for: blessed
+The best dashboard ever :-)
+
+Thanks [blessed-contrib](https://github.com/yaronn/blessed-contrib) for this fantastic tool!
 
 # Usage
 
-See `run.sh` and `blessed.sh` for examples on how to run the application.
-
-# Exposed Ports
-
-| Port number| Description                                                       |
-| :----------| :-----------------------------------------------------------------|
-| `32000`    | The application runs here                                         |
-|            | |
-
-# Volumes
-
-| Volume path          | Description                                             |
-| :--------------------| :-------------------------------------------------------|
-| | |
-| | |
-
-# Environment variables
-
-| Environment | Description                                        |  Default   |
-| :-----------| :--------------------------------------------------|:-----------|
-| | | |
-| | | |
-
-# Base image configurable settings
-
-Lots of things can be configured through the base image.
-
-See repo [docker-x11webui](https://github.com/IvoNet/docker-x11webui/blob/master/README.md)
-for documentation on the base image.
+See `run.sh`  for example on how to run the application.
 
 # For developers
 
